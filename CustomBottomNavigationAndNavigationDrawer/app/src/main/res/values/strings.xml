@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">PorterApp</string>
+    <string name="nav_open">Open Navigation Bar</string>
+    <string name="nav_close"> Close Navigation Drawer</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Truck">Truck</string>
+    <string name="Bus">Bus</string>
+    <string name="CartFragment">cartFragment\n</string>
+    <string name="fav">fav</string>
+    <string name="Profile">Profile</string>
+
+
+</resources>
