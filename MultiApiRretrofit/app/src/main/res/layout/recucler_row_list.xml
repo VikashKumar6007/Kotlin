@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_8sdp">
+
+    <TextView
+        android:id="@+id/txtViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="@dimen/_16ssp"
+        android:text="cac"
+        android:textColor="@color/black"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+    <TextView
+        android:id="@+id/txtViewEmail"
+        android:layout_below="@+id/txtViewName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="cdc"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+    <TextView
+        android:id="@+id/txtViewStatus"
+        android:layout_below="@+id/txtViewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:layout_marginBottom="@dimen/_4sdp"
+        android:text="cadc"
+        android:textSize="@dimen/_10ssp"
+        android:textColor="@color/black"
+        android:layout_marginStart="@dimen/_10sdp"
+        />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/black"
+        android:layout_below="@id/txtViewStatus"/>
+
+</RelativeLayout>
