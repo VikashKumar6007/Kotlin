@@ -23,9 +23,9 @@ interface RetroService {
 
 
     //https://gorest.co.in/public/v2/users?name=E
-//    @GET("users")
-//    @Headers("Accept:application/json", "Content-Type:application/json")
-//    fun searchUser(@Query("name") searchText: String): Call<UserList>
+    @GET("users")
+   // @Headers("Accept:application/json", "Content-Type:application/json")
+    fun searchUser(@Query("name") searchText: String): Call<List<User>>
 //
 //    //    https://gorest.co.in/public/v2/users/6972434
 //    //  we will use this api for edit the txt with same user

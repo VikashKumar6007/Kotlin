@@ -53,27 +53,27 @@ class MainActivityViewModel : ViewModel() {
     }
 
 
-//    fun searchUser(searchText: String) {
-//
-//        val retoInstance = RetoInstance.getRetrofitInstance().create(RetroService::class.java)
-//        val call = retoInstance.searchUser(searchText)
-//        call.enqueue(object : Callback<UserList> {
-//            override fun onResponse(call: Call<UserList>, response: Response<UserList>) {
-//                if (response.isSuccessful) {
-//                    recyclerListData.postValue(response.body())
-//                } else {
-//
-//                }
-//            }
-//
-//            override fun onFailure(call: Call<UserList>, t: Throwable) {
-//
-//                recyclerListData.postValue(null)
-//            }
-//
-//        })
-//
-//    }
+    fun searchUser(searchText: String) {
+
+        val retoInstance = RetoInstance.getRetrofitInstance().create(RetroService::class.java)
+        val call = retoInstance.searchUser(searchText)
+        call.enqueue(object : Callback<List<User>> {
+            override fun onResponse(call: Call<List<User>>, response: Response<List<User>>) {
+                if (response.isSuccessful) {
+                    recyclerListData.postValue(response.body())
+                } else {
+
+                }
+            }
+
+            override fun onFailure(call: Call<List<User>>, t: Throwable) {
+
+                recyclerListData.postValue(null)
+            }
+
+        })
+
+    }
 
 
 }

@@ -2,6 +2,7 @@ package com.example.multipleapiretrofit
 
 
 import android.os.Bundle
+import android.text.TextUtils
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
@@ -24,23 +25,23 @@ class MainActivity : AppCompatActivity() {
         recyclerView = binding.recyclerView
         initRecyclerView()
         initViewModel()
-
-
-        // searchUser()
+        searchUser()
 
     }
 
-//    private fun searchUser() {
-//        val searchbtn = binding.searchBtn.text.toString()
-//        binding.searchBtn.setOnClickListener {
-//            if (!TextUtils.isEmpty(searchbtn)) {
-//                viewModel.searchUser(searchbtn)
-//            } else {
-//                //  viewModel.searchUser(searchbtn)
-//                viewModel.getUserList()
-//            }
-//        }
-//    }
+    private fun searchUser() {
+        val searchText = binding.searchEditTxt.text.toString()
+        val Search = binding.searchBtn
+
+        Search.setOnClickListener {
+            if (!TextUtils.isEmpty(searchText)) {
+                viewModel.searchUser(searchText)
+            } else {
+                //viewModel.searchUser(searchbtn)
+                viewModel.getUserList()
+            }
+        }
+    }
 
     private fun initRecyclerView() {
         recyclerView.apply {
